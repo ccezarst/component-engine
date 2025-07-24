@@ -1,0 +1,11 @@
+EngineCore\EngineCore.class
+EngineCore\DefaultComponents\CoreComponent$CoreComponentBackingThread.class
+EngineCore\DefaultComponents\CoreComponent.class
+EngineCore\Actions\ActionDataContainer.class
+EngineCore\Actions\Action.class
+EngineCore\DefaultComponents\GlobalVariableContainer.class
+EngineCore\DefaultComponents\Extra\Configs$MissingConfigException.class
+EngineCore\TestingEnviromentCore.class
+EngineCore\DefaultComponents\ComponentType.class
+EngineCore\DefaultComponents\CoreComponentSettings.class
+EngineCore\DefaultComponents\Extra\Configs.class

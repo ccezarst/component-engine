@@ -1,0 +1,16 @@
+package EngineCore.DefaultComponents;
+
+public enum ComponentType {
+	PORT_BINDER,
+	PORT_MANAGER,
+	CONNECTION_MANAGER,
+	PROTOCOL_HANDLER,
+	HTTP_ROUTER,
+	HTTP_ENDPOINT,
+	CONNECTOR,
+	MAPPINGS,
+	WEBSITE,
+	ERP,
+	CACHE,
+    OTHER
+}

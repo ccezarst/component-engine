@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <copy file="C:\Users\cezar\Documents\Coding\Eclipse\componentEngine/pom.xml" tofile="C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target/build/componentEngine-0.0.1-SNAPSHOT.pom" overwrite="true" />
+  </target>
+</project>

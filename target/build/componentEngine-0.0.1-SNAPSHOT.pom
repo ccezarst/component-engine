@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.ccezarst</groupId>
+  <artifactId>componentEngine</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>componentEngine</name>
+  <description>A component engine which allows devs to build modular systems with indpendent components. Supports multithreading by default.</description>
+  <url>http://maven.apache.org</url>
+  <licenses>
+  	<license>
+  		<name>CC BY-NC-SA 4.0</name>
+  		<url>https://creativecommons.org/licenses/by-nc-sa/4.0/</url>
+  	</license>
+  </licenses>
+  <developers>
+  	<developer>
+  		<name>Constantin Cezar Stefan</name>
+  	</developer>
+  </developers>
+  <scm>
+	  <connection>scm:git:git://github.com/ccezarst/component-engine.git</connection>
+	  <developerConnection>scm:git:ssh://github.com:ccezarst/component-engine.git</developerConnection>
+	  <url>http://github.com/ccezarst/component-engine/tree/master</url>
+  </scm>
+  <build>
+  <plugins>
+    <!-- 1) Put the JAR into target/build -->
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.2.2</version>
+      <configuration>
+        <!-- default is ${project.build.directory} = target -->
+        <outputDirectory>${project.build.directory}/build</outputDirectory>
+      </configuration>
+      <!-- no need to bind explicitly; jar:jar is in the package phase by default -->
+    </plugin>
+
+    <!-- 2) Copy the artifact POM into the same folder, named artifactId-version.pom -->
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-antrun-plugin</artifactId>
+      <version>3.0.0</version>
+      <executions>
+        <execution>
+          <id>copy-artifact-pom</id>
+          <phase>package</phase>
+          <goals>
+            <goal>run</goal>
+          </goals>
+          <configuration>
+            <target>
+              <!-- copy & rename -->
+              <copy
+                file="${basedir}/pom.xml"
+                tofile="${project.build.directory}/build/${project.artifactId}-${project.version}.pom"
+                overwrite="true"/>
+            </target>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+  </build>
+
+</project>
