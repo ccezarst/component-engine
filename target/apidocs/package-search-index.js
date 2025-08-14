@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"EngineCore"},{"l":"EngineCore.Actions"},{"l":"EngineCore.DefaultComponents"},{"l":"EngineCore.DefaultComponents.Extra"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"EngineCore"},{"l":"EngineCore.Actions"},{"l":"EngineCore.DefaultComponents"},{"l":"EngineCore.DefaultComponents.Extra"},{"l":"EngineCore.DefaultComponents.Extra.UserInterface"}];updateSearchResults();

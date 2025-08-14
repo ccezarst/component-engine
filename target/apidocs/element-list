@@ -2,3 +2,4 @@ EngineCore
 EngineCore.Actions
 EngineCore.DefaultComponents
 EngineCore.DefaultComponents.Extra
+EngineCore.DefaultComponents.Extra.UserInterface

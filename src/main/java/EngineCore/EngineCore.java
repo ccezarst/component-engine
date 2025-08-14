@@ -13,6 +13,8 @@ import EngineCore.DefaultComponents.ComponentType;
 import EngineCore.DefaultComponents.CoreComponent;
 import EngineCore.DefaultComponents.CoreComponent.CoreComponentBackingThread;
 import EngineCore.DefaultComponents.GlobalVariableContainer;
+import EngineCore.DefaultComponents.Extra.UserInterface.ConsoleInterface;
+import EngineCore.DefaultComponents.Extra.UserInterface.GeneralCommandsHandler;
 
 public class EngineCore {
 	// TODO: add exception throwing to the code
@@ -27,8 +29,20 @@ public class EngineCore {
 
     private boolean logInteractions = false;
 
-    public EngineCore(){
+    public EngineCore(boolean useInstrumentation, Class<?> instrumentationClass){
         this.superSecretFunc();
+		this.addComponent(new GeneralCommandsHandler(true, this));
+		this.addComponent(new ConsoleInterface(true, this));
+		this.useInstrumentation = useInstrumentation;
+		this.instrumentation = instrumentationClass;
+		if(this.useInstrumentation) {
+        	InstrumentationBootstrap.install(instrumentation);
+        	// this allows stuff like seeing loaded classes, etc..
+        }
+    }
+    
+    public EngineCore(){
+        this(true, InstrumentationInterface.class);
     }
 
     public final void superSecretFunc(){
@@ -335,7 +349,9 @@ public class EngineCore {
 
     //                      -- EXTRA
 
-
+    public boolean useInstrumentation = true;
+    public Class<?> instrumentation = InstrumentationInterface.class;
+    
     public boolean debugMode = false;
 
     public void enableDebugging(){
@@ -371,64 +387,11 @@ public class EngineCore {
             for(CoreComponent.CoreComponentBackingThread th: this.threadsList){
                 toPrint += th.getName() + " - " + th.attachedComponentStepIndex.keySet().toString() + "\n";
             }
-        //  ----------- this.getComponentFromName("UI_Manager", UI_Manager.class).showWarning(toPrint);
         }
-        /* v2
-        int threadNr = 0;
-        ArrayList<ArrayList<Consumer<Integer>>> temp = new ArrayList<>(); // temp list of lists to hold the consumers for each thread, then push consumers to each thread
-        for(int i = 0; i < this.threads; i++){
-            temp.add(new ArrayList<>()); // fill with empty lists
-        }
-        for(CoreComponent comp : this.components){
-            comp.threadId = threadNr;
-            temp.get(threadNr).add((Integer o) -> {
-               // integer is js as placeholder, not used
-               comp.primitiveStep(this);
-            });
-            if(threadNr >= this.threads-1){
-                threadNr = 0;
-            }else{
-                threadNr += 1;
-            };
-        }
-        for(ArrayList<Consumer<Integer>> threadSteps: temp){
-            this.threadsList.add(new CoreComponent.CoreComponentBackingThread(threadSteps, this));
-        }
-        *\
-
-        /* v1
-
-        int compsPerThread = (int) Math.ceil(this.components.size() / this.threads);
-        ArrayList<CoreComponent> tempList = this.components;
-        threadsList.clear();
-        for(int i = 0; i < this.threads-1; i++){
-            ArrayList<Consumer<Integer>> temp = new ArrayList<>();
-            for(int b = 0; b < compsPerThread; b++){
-                temp.add((Integer c) -> {
-                    tempList.remove(0).primitiveStep(this);
-                });
-            }
-            threadsList.add(new CoreComponent.CoreComponentBackingThread(temp));
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
-        ArrayList<Consumer<Integer>> temp = new ArrayList<>();
-        while(!tempList.isEmpty()){
-            temp.add((Integer c) -> {
-                tempList.remove(0).primitiveStep(this);
-            });
-        }
-        threadsList.add(new CoreComponent.CoreComponentBackingThread(temp));
-         */
         if(this.logInteractions){
             this.logInteraction("Core updated");
         }
-        //for(int i = 0; i < this.components.size(); i++){
-        //    this.components.get(i).primitiveUpdate(this);
-        //}
+
     }
 
     public void start(){
