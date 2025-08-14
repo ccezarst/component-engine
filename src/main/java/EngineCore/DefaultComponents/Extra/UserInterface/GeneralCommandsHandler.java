@@ -1,6 +1,8 @@
 package EngineCore.DefaultComponents.Extra.UserInterface;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import EngineCore.EngineCore;
@@ -31,7 +33,48 @@ public class GeneralCommandsHandler extends UserInterface implements CommandHand
 	        // Avoid closing if `out` is shared elsewhere
 	    }
 	    if(command.equals("seeLoadedClasses")) {
-	    	p.println(InstrumentationInterface.getAllLoadedClassNames().toString());
+	    	List<String> caca = InstrumentationInterface.getAllLoadedClassNames();
+	    	ArrayList<String> filters = new ArrayList<>();
+	    	int i = 0;
+	    	while(true) {
+	    		if(i >= args.length) {
+	    			break;
+	    		}
+	    		String arg = args[i];
+	    		if(arg.equals("-exclude")) {
+	    			i += 1;
+	    			while(true) {
+	    	    		if(i >= args.length) {
+	    	    			break;
+	    	    		}
+	    	    		filters.add(args[i]);
+		    			i += 1;
+	    			}
+	    			
+	    		}else if(arg.equals("-defaultFilters")) {
+	    			filters.add("com");
+	    			filters.add("jdk");
+	    			filters.add("org");
+	    			filters.add("sun");
+	    			filters.add("java");
+	    			filters.add("[");
+	    		}
+	    		i += 1;
+	    	}
+	    	for(String className: caca) {
+	    		boolean pass = true;
+	    		for(String filter: filters) {
+	    			if(className.startsWith(filter)) {
+	    				pass = false;
+	    			}
+	    		}
+	    		if(pass) {
+	    			p.println(className);
+	    		}
+	    	}
+	    	p.println("Args: ");
+	    	p.println("-exclude <filter> <filter2> ...: excludes any classes with that full names start with <filter> or <filter2> ...");
+	    	p.println("-defaultFilters: exludes java,com,jdk,org,sun,[ from the list");
 	    }
 	    p.flush();
 	}

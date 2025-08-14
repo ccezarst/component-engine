@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.ccezarst</groupId>
   <artifactId>componentEngine</artifactId>
-  <version>0.0.6</version>
+  <version>0.0.7</version>
 
   <name>componentEngine</name>
   <description>A component engine enabling modular architecture with multithreading support by default.</description>

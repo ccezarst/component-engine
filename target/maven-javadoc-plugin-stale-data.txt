@@ -22,11 +22,11 @@
 'UTF-8'
 -Xdoclint:none
 -doctitle
-'componentEngine 0.0.6 API'
+'componentEngine 0.0.7 API'
 -use
 -version
 -windowtitle
-'componentEngine 0.0.6 API'
+'componentEngine 0.0.7 API'
 EngineCore.Actions
 EngineCore.DefaultComponents
 EngineCore.DefaultComponents.Extra
@@ -50,19 +50,19 @@ C:\Users\cezar\.m2\repository\org\mapdb\elsa\3.0.0-M5\elsa-3.0.0-M5.jar = 175415
 C:\Users\cezar\.m2\repository\org\json\json\20250517\json-20250517.jar = 1752753472506
 C:\Users\cezar\.m2\repository\io\github\ccezarst\componentEngine\0.0.2\componentEngine-0.0.2.jar = 1754327581832
 C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\src\main\java = 1753364964606
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\generated-sources\annotations = 1755180441146
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\allclasses-index.html = 1755180446080
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\allpackages-index.html = 1755180446082
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\element-list = 1755180445827
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\help-doc.html = 1755180446115
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\index-all.html = 1755180446105
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\index.html = 1755180446049
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\member-search-index.js = 1755180446086
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\module-search-index.js = 1755180446083
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\overview-summary.html = 1755180446111
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\overview-tree.html = 1755180446041
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\package-search-index.js = 1755180446084
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\search.html = 1755180446108
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\serialized-form.html = 1755180445907
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\tag-search-index.js = 1755180446087
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\type-search-index.js = 1755180446085
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\generated-sources\annotations = 1755182334355
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\allclasses-index.html = 1755182339239
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\allpackages-index.html = 1755182339243
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\element-list = 1755182338996
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\help-doc.html = 1755182339278
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\index-all.html = 1755182339269
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\index.html = 1755182339216
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\member-search-index.js = 1755182339249
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\module-search-index.js = 1755182339244
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\overview-summary.html = 1755182339275
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\overview-tree.html = 1755182339210
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\package-search-index.js = 1755182339246
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\search.html = 1755182339271
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\serialized-form.html = 1755182339076
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\tag-search-index.js = 1755182339250
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\type-search-index.js = 1755182339247
