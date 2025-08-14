@@ -28,8 +28,27 @@ public abstract class CoreComponent {
 
         private ArrayList<Integer> pausedComponents = new ArrayList<>();
 
+        public String[] getAttachedComponents() {
+        	    return attachedComponentStepIndex
+        			           .keySet()
+        			             .toArray(new String[0]);
+
+        }
+        
         public boolean isComponentAttached(String compName){
             return this.attachedComponentStepIndex.containsKey(compName);
+        }
+        
+        public String[] getPausedComponents() {
+        	ArrayList<String> res = new ArrayList<>();
+        	for(Integer in: pausedComponents) { // i don't think efficiency matters that much here :/
+        		for(Map.Entry<String, Integer> comp: attachedComponentStepIndex.entrySet()) {
+            		if(comp.getValue() == in) {
+            			res.add(comp.getKey());
+            		}
+            	}	
+        	}
+        	return res.toArray(new String[0]);
         }
 
         public void attachComponent(CoreComponent comp){
@@ -81,6 +100,9 @@ public abstract class CoreComponent {
                     index = cEntry.getValue();
                 }
             }
+            if(index == -1) {
+            	throw new IllegalArgumentException("Couldn't pause component because it's not on this thread: " + name);
+            }
             this.pausedComponents.add(index);
         }
 
@@ -90,6 +112,9 @@ public abstract class CoreComponent {
                 if(cEntry.getKey() == name){
                     index = cEntry.getValue();
                 }
+            }
+            if(index == -1) {
+            	throw new IllegalArgumentException("Couldn't pause component because it's not on this thread: " + name);
             }
             this.pausedComponents.remove(index);
         }

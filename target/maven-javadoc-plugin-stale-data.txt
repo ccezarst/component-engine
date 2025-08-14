@@ -17,31 +17,31 @@
 -docencoding
 'UTF-8'
 -doctitle
-'componentEngine 0.0.1 API'
+'componentEngine 0.0.4 API'
 -linkoffline
 'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/cezar/Documents/Coding/Eclipse/componentEngine/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'componentEngine 0.0.1 API'
+'componentEngine 0.0.4 API'
 EngineCore.Actions
 EngineCore.DefaultComponents
 EngineCore.DefaultComponents.Extra
 EngineCore
 C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\src\main\java = 1753364964606
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\generated-sources\annotations = 1753718455840
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\allclasses-index.html = 1753718461734
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\allpackages-index.html = 1753718461736
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\element-list = 1753718461602
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\help-doc.html = 1753718461772
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\index-all.html = 1753718461757
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\index.html = 1753718461696
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\member-search-index.js = 1753718461740
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\module-search-index.js = 1753718461737
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\overview-summary.html = 1753718461762
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\overview-tree.html = 1753718461693
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\package-search-index.js = 1753718461738
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\search.html = 1753718461759
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\serialized-form.html = 1753718461638
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\tag-search-index.js = 1753718461741
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\type-search-index.js = 1753718461739
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\generated-sources\annotations = 1755168132768
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\allclasses-index.html = 1755168140746
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\allpackages-index.html = 1755168140749
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\element-list = 1755168140596
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\help-doc.html = 1755168140868
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\index-all.html = 1755168140848
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\index.html = 1755168140725
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\member-search-index.js = 1755168140808
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\module-search-index.js = 1755168140750
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\overview-summary.html = 1755168140859
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\overview-tree.html = 1755168140721
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\package-search-index.js = 1755168140750
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\search.html = 1755168140853
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\serialized-form.html = 1755168140651
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\tag-search-index.js = 1755168140819
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\type-search-index.js = 1755168140752

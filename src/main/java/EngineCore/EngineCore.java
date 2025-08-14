@@ -11,9 +11,11 @@ import EngineCore.Actions.Action;
 import EngineCore.Actions.ActionDataContainer;
 import EngineCore.DefaultComponents.ComponentType;
 import EngineCore.DefaultComponents.CoreComponent;
+import EngineCore.DefaultComponents.CoreComponent.CoreComponentBackingThread;
 import EngineCore.DefaultComponents.GlobalVariableContainer;
 
 public class EngineCore {
+	// TODO: add exception throwing to the code
     private ArrayList<CoreComponent> components = new ArrayList<CoreComponent>();
 
     private Map<String, GlobalVariableContainer> globalVariables;
@@ -347,8 +349,7 @@ public class EngineCore {
     
     
     public void update(){
-        this.reorderComponents(); // just to be safe
-    //  ----------- this.getComponentFromName("UI_Manager", UI_Manager.class).showWarning(this.components.toString());
+        this.reorderComponents(); // just to be safe 
         if(this.oneThreadPerComponent) {
         	this.threads = this.components.size();
         }
@@ -433,10 +434,38 @@ public class EngineCore {
     public void start(){
         for(CoreComponent.CoreComponentBackingThread th : this.threadsList){
             th.startRunning();
+            th.setUncaughtExceptionHandler((t, e) -> {
+                this.handleThreadException((CoreComponentBackingThread)t, e);
+            });
         }
     }
-
+    
+    protected void handleThreadException(CoreComponentBackingThread t, Throwable e) {
+    	e.printStackTrace();
+    	// TODO: add a error/logging system to properly log the thread's exception
+    	this.threadsList.remove(t);
+    	String[] attachedComponents = t.getAttachedComponents();
+    	String[] pausedComponents = t.getPausedComponents();
+    	CoreComponentBackingThread newThread = this.createNewThread();
+    	for(String c: attachedComponents) { // re-attach the components to the new thread
+    		newThread.attachComponent(this.getComponentFromName(c));
+    	}
+    	for(String c: pausedComponents) { // re-pause the components to the new thread
+    		newThread.pauseComponentExecution(c);
+    	}
+    	newThread.startRunning();
+    	newThread.setUncaughtExceptionHandler((tt, ee) -> {
+            this.handleThreadException((CoreComponentBackingThread)tt, ee);
+        });
+    	this.update();
+    	System.out.println("Thread restarted ");
+    }
+    
     public void step(){
+    	// should not use anymore bcauze the components are automatically stepped by their backing thread
+    	// if you want to manually step the components by the main thread, you have to either
+    	// 1. make threading optional on the core
+    	// 2. pause the execution of all the threads then step the components manually
         if(this.logInteractions){
             this.logInteraction("Core stepped");
         }
