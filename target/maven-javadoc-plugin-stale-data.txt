@@ -2,8 +2,6 @@
 @packages
 -locale
 'en'
--classpath
-'C:/Users/cezar/.m2/repository/io/github/ccezarst/jAutoEng/0.0.1-SNAPSHOT/jAutoEng-0.0.1-SNAPSHOT.jar;C:/Users/cezar/.m2/repository/org/mapdb/mapdb/3.1.0/mapdb-3.1.0.jar;C:/Users/cezar/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.9.255-SNAPSHOT/kotlin-stdlib-1.9.255-SNAPSHOT.jar;C:/Users/cezar/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar;C:/Users/cezar/.m2/repository/org/eclipse/collections/eclipse-collections-api/10.4.0/eclipse-collections-api-10.4.0.jar;C:/Users/cezar/.m2/repository/org/eclipse/collections/eclipse-collections/10.4.0/eclipse-collections-10.4.0.jar;C:/Users/cezar/.m2/repository/org/eclipse/collections/eclipse-collections-forkjoin/10.4.0/eclipse-collections-forkjoin-10.4.0.jar;C:/Users/cezar/.m2/repository/com/google/guava/guava/999.0.0-HEAD-jre-SNAPSHOT/guava-999.0.0-HEAD-jre-SNAPSHOT.jar;C:/Users/cezar/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar;C:/Users/cezar/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:/Users/cezar/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar;C:/Users/cezar/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar;C:/Users/cezar/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar;C:/Users/cezar/.m2/repository/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar;C:/Users/cezar/.m2/repository/org/mapdb/elsa/3.0.0-M5/elsa-3.0.0-M5.jar;C:/Users/cezar/.m2/repository/org/json/json/20250517/json-20250517.jar;C:/Users/cezar/.m2/repository/io/github/ccezarst/componentEngine/0.0.2/componentEngine-0.0.2.jar'
 -encoding
 'UTF-8'
 -protected
@@ -22,47 +20,30 @@
 'UTF-8'
 -Xdoclint:none
 -doctitle
-'componentEngine 0.0.7 API'
+'componentEngine 1.0.0 API'
 -use
 -version
 -windowtitle
-'componentEngine 0.0.7 API'
+'componentEngine 1.0.0 API'
 EngineCore.Actions
 EngineCore.DefaultComponents
 EngineCore.DefaultComponents.Extra
 EngineCore.DefaultComponents.Extra.UserInterface
 EngineCore
-C:\Users\cezar\.m2\repository\io\github\ccezarst\jAutoEng\0.0.1-SNAPSHOT\jAutoEng-0.0.1-SNAPSHOT.jar = 1754327907401
-C:\Users\cezar\.m2\repository\org\mapdb\mapdb\3.1.0\mapdb-3.1.0.jar = 1754151438234
-C:\Users\cezar\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.9.255-SNAPSHOT\kotlin-stdlib-1.9.255-SNAPSHOT.jar = 1754151441058
-C:\Users\cezar\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar = 1754151438281
-C:\Users\cezar\.m2\repository\org\eclipse\collections\eclipse-collections-api\10.4.0\eclipse-collections-api-10.4.0.jar = 1754151438755
-C:\Users\cezar\.m2\repository\org\eclipse\collections\eclipse-collections\10.4.0\eclipse-collections-10.4.0.jar = 1754151439671
-C:\Users\cezar\.m2\repository\org\eclipse\collections\eclipse-collections-forkjoin\10.4.0\eclipse-collections-forkjoin-10.4.0.jar = 1754151438481
-C:\Users\cezar\.m2\repository\com\google\guava\guava\999.0.0-HEAD-jre-SNAPSHOT\guava-999.0.0-HEAD-jre-SNAPSHOT.jar = 1754151442641
-C:\Users\cezar\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar = 1754151438414
-C:\Users\cezar\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar = 1753442492465
-C:\Users\cezar\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar = 1754151438320
-C:\Users\cezar\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar = 1754151438364
-C:\Users\cezar\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar = 1754151438405
-C:\Users\cezar\.m2\repository\net\jpountz\lz4\lz4\1.3.0\lz4-1.3.0.jar = 1754151438478
-C:\Users\cezar\.m2\repository\org\mapdb\elsa\3.0.0-M5\elsa-3.0.0-M5.jar = 1754151438587
-C:\Users\cezar\.m2\repository\org\json\json\20250517\json-20250517.jar = 1752753472506
-C:\Users\cezar\.m2\repository\io\github\ccezarst\componentEngine\0.0.2\componentEngine-0.0.2.jar = 1754327581832
 C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\src\main\java = 1753364964606
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\generated-sources\annotations = 1755182334355
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\allclasses-index.html = 1755182339239
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\allpackages-index.html = 1755182339243
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\element-list = 1755182338996
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\help-doc.html = 1755182339278
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\index-all.html = 1755182339269
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\index.html = 1755182339216
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\member-search-index.js = 1755182339249
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\module-search-index.js = 1755182339244
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\overview-summary.html = 1755182339275
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\overview-tree.html = 1755182339210
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\package-search-index.js = 1755182339246
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\search.html = 1755182339271
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\serialized-form.html = 1755182339076
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\tag-search-index.js = 1755182339250
-C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\type-search-index.js = 1755182339247
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\generated-sources\annotations = 1755182598974
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\allclasses-index.html = 1755182603689
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\allpackages-index.html = 1755182603691
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\element-list = 1755182603459
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\help-doc.html = 1755182603728
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\index-all.html = 1755182603718
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\index.html = 1755182603673
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\member-search-index.js = 1755182603695
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\module-search-index.js = 1755182603692
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\overview-summary.html = 1755182603724
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\overview-tree.html = 1755182603668
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\package-search-index.js = 1755182603693
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\search.html = 1755182603720
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\serialized-form.html = 1755182603526
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\tag-search-index.js = 1755182603696
+C:\Users\cezar\Documents\Coding\Eclipse\componentEngine\target\apidocs\type-search-index.js = 1755182603694
