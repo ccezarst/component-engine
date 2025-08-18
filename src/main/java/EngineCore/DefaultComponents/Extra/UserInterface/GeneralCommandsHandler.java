@@ -20,7 +20,7 @@ public class GeneralCommandsHandler extends UserInterface implements CommandHand
 
 	@Override
 	public String[] getAllowedCommand() {
-		return new String[] {"help", "commands", "/?", "seeLoadedClasses"};
+		return new String[] {"help", "commands", "/?", "seeLoadedClasses", "threadsList", "componentList", "componentStatuses", "exit"};
 	}
 
 	public void handleCommand(String command, ResponseOutputStream out, String... args) {
@@ -75,6 +75,22 @@ public class GeneralCommandsHandler extends UserInterface implements CommandHand
 	    	p.println("Args: ");
 	    	p.println("-exclude <filter> <filter2> ...: excludes any classes with that full names start with <filter> or <filter2> ...");
 	    	p.println("-defaultFilters: exludes java,com,jdk,org,sun,[ from the list");
+	    }else if(command.equals("threadsList")) {
+	    	for(CoreComponentBackingThread th: this.core.threadsList) {
+	    		p.print(th.getName() + " -> ");
+	    		for(String comp: th.getAttachedComponents()) {
+	    			p.print(comp + ", ");
+	    		}
+	    		p.println();
+	    	}
+	    }else if(command.equals("componentList")) {
+	    	for(CoreComponent comp: this.core.getAllComponents()) {
+	    		p.println(comp.name);
+	    	}
+	    }else if(command.equals("componentStatuses")) {
+	    	p.println(this.core.getStatus());
+	    }else if(command.equals("exit")) {
+	    	this.core.exit();
 	    }
 	    p.flush();
 	}

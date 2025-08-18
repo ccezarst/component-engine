@@ -467,12 +467,20 @@ public class EngineCore {
     }
 
     public void exit(){
+    	System.out.print("Running threads: ");
+    	for(Thread thread: Thread.getAllStackTraces().keySet()) {
+    		System.out.print(thread.getName() + ", ");
+    	}
+    	System.out.println();
         for(CoreComponent.CoreComponentBackingThread thread: this.threadsList){
             thread.stopRunning();
+            System.out.println("Stopped thread: " + thread.getName());
         }
         for(CoreComponent comp : this.components){
             comp.primitiveExit();
+            System.out.println("Component exited: " + comp.name);
         }
+        Thread.currentThread().interrupt();
     }
 
     public ArrayList<String> testComponents(){

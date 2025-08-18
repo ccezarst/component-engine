@@ -174,7 +174,7 @@ public abstract class CoreComponent {
             // because the func runs on the calling func's thread, which in this example is the current thread.
 
             long loopOut = 0;
-            while(this.stoppedRunning != true && loopOut < 2000){loopOut += 1;} // fail safe in case the ^ex happens
+            while(this.stoppedRunning != true && loopOut < 5000){loopOut += 1;} // fail safe in case the ^ex happens
         }
     }
 
@@ -272,9 +272,7 @@ public abstract class CoreComponent {
     protected abstract int test(TestingEnviromentCore core);
 
     public final void primitiveExit(){
-        if(this.active){
-            this.exit();
-        }
+    	this.exit();
     }
     protected void exit(){}
     

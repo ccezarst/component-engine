@@ -8,6 +8,7 @@ public enum ComponentType { // TO-DO: change this to an interface based thing so
 	HTTP_ROUTER,
 	HTTP_ENDPOINT,
 	CONNECTOR,
+	INDEXED_CONNECTOR,
 	MAPPINGS,
 	WEBSITE,
 	ERP,
